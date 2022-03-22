@@ -1,4 +1,4 @@
-# Data-Scraping
+# Data-Scraping with typer CLI
 
 **install following Python Libraries**
 
