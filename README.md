@@ -13,8 +13,8 @@ python -m pip install typer
 
 ### run with python
 ```
-python .\main.py thbuththegama_DEC_prices
-python .\main.py run text-to-list file
+python .\main.py thbuththegama-dec-prices
+python .\main.py text-to-list file
 ```
 replace '_file_' with your file name
 
@@ -28,7 +28,7 @@ replace '_file_' with your file name
 ### run with typer cli
 
 ```
-typer .\main.py run thbuththegama_DEC_prices
+typer .\main.py run thbuththegama-dec-prices
 typer .\main.py run text-to-list file
 ``` 
 **Note that text file should be in the same directory as main.py**
