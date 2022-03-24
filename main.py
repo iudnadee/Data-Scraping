@@ -161,7 +161,7 @@ def text_to_list(filename : str,funname : str):
 
     Today = datetime.today().strftime('%Y-%m-%d')
     # create csv and write data
-    with open(Today+funname+"-"+filename+'-items-price.csv', 'w', encoding='utf-8', newline='') as f:
+    with open(Today+"-"+funname+"-"+filename+'-items-price.csv', 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
         
         #write Headers
