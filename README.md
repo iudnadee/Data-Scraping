@@ -42,4 +42,3 @@ typer .\main.py run text-to-list file thabuththegama
 ``` 
 **Note that text file should be in the same directory as main.py**
 
-# text-to-list items dambulla not return any values. Need to fix it #
