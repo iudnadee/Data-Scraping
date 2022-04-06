@@ -138,7 +138,7 @@ def text_to_list(filename : str,funname : str):
     
     if(funname == "thabuththegama"):
         functionRun = thbuththegama_DEC_prices()
-    elif (funname == "dabulla"):
+    elif (funname == "dambulla"):
         functionRun = dambulla_DEC_prices()
     else:
         print("invalied function")
