@@ -9,12 +9,18 @@ python -m pip install requests
 python -m pip install BeautifulSoup4
 python -m pip install datetime
 python -m pip install typer
+python -m pip install deep_translator
 ```
 
 ### run with python
 ```
 python .\main.py thbuththegama-dec-prices
-python .\main.py text-to-list file
+python .\main.py dambulla-dec-prices 
+```
+#### Select item price according to text file
+```
+python .\main.py text-to-list file thabuththegama
+python .\main.py text-to-list items dambulla
 ```
 replace '_file_' with your file name
 
@@ -29,6 +35,11 @@ replace '_file_' with your file name
 
 ```
 typer .\main.py run thbuththegama-dec-prices
-typer .\main.py run text-to-list file
+typer .\main.py run dambulla-dec-prices 
+
+typer .\main.py run text-to-list items dambulla
+typer .\main.py run text-to-list file thabuththegama
 ``` 
 **Note that text file should be in the same directory as main.py**
+
+# text-to-list items dambulla not return any values. Need to fix it #
