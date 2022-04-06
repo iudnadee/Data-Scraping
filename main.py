@@ -8,6 +8,7 @@ from datetime import datetime
 import typer
 import datefinder
 from facebook_scraper import get_posts
+from deep_translator import GoogleTranslator
 
 app = typer.Typer()
 
@@ -98,7 +99,8 @@ def dambulla_DEC_prices():
 
         for p in patterns:
             match= re.findall(p, item)
-            name=match[0].unicode('utf8')
+            name=match[0]
+            translated = GoogleTranslator(source='auto', target='en').translate(name)
             
         numbers = re.findall(r'\d+', item)
         r=len(numbers)
@@ -116,11 +118,11 @@ def dambulla_DEC_prices():
             max = '-'
 
 
-        val = [name,min,max]
+        val = [translated,min,max]
 
         item_list.append(val)
 
-    with open(date+'Dambulla-dec-prices'+'.csv', 'w', encoding='utf-8', newline='') as f:
+    with open(date+'Dambulla-dec-prices'+'.csv', 'w', encoding='utf-8',newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -161,7 +163,7 @@ def text_to_list(filename : str,funname : str):
 
     Today = datetime.today().strftime('%Y-%m-%d')
     # create csv and write data
-    with open(Today+"-"+funname+"-"+filename+'-items-price.csv', 'w', encoding='utf-8', newline='') as f:
+    with open(Today+funname+"-"+filename+'-items-price.csv', 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
         
         #write Headers
